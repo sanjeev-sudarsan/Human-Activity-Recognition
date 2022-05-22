@@ -20,25 +20,25 @@ Before running the script, make sure the requirements are met by installing from
 
 ## Directory structure
 ```
-|-- Human_Activity_Recognition
-    |-- .gitignore
-    |-- README.md
-    |-- requirements.txt
-    |-- datasets
-    |-- experiments
-    |-- main.py
-    |-- train.py
-    |-- wandb-tune.py
-    |-- architecture
-    |   |-- base_model.py
-    |   |-- models.py
-    |-- configs
-    |   |-- config.gin
-    |-- input_pipeline
-    |   |-- data_loader.py
-    |-- utils
-        |-- utils_misc.py
-        |-- utils_params.py
+ Human_Activity_Recognition
+ |-- .gitignore
+ |-- README.md
+ |-- requirements.txt
+ |-- datasets
+ |-- experiments
+ |-- main.py
+ |-- train.py
+ |-- wandb-tune.py
+ |-- architecture
+ |   |-- base_model.py
+ |   |-- models.py
+ |-- configs
+ |   |-- config.gin
+ |-- input_pipeline
+ |   |-- data_loader.py
+ |-- utils
+     |-- utils_misc.py
+     |-- utils_params.py
 ```
 
 * **Hyperparameter Tuning:**
