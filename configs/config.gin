@@ -1,0 +1,55 @@
+#################### Parameters not to change ####################
+
+# model parameters
+# Feature size of the input dataset
+get_classifier.input_size = 6
+
+# Number of claases to classify
+get_classifier.num_classes = 12
+
+
+#################### Optional Parameters to change ####################
+
+# Specify the name of the model for training or evaluating
+# choose from the following
+    # maxpool_bidirectional_lstm
+    # maxpool_lstm
+    # simple_lstm
+    # bidirectional_lstm
+train.model = 'maxpool_bidirectional_lstm'
+
+# Number of epochs to train the model
+train.EPOCHS = 5
+
+# Size of the window and the amount to shift while preparing dataset
+HAPTDataModule.WIN_SIZE = 256
+HAPTDataModule.WIN_SHIFT = 128
+
+HAPTDataModule.BATCH_SIZE = 64
+
+# Hidden Size for the LSTM network
+get_classifier.hidden_size = 50
+
+# Number of LSTM layers in the model
+get_classifier.num_layers = 3
+
+get_classifier.LEARNING_RATE = 0.003
+get_classifier.DROPOUT_RATE = 0.1
+get_classifier.REGULARIZATION = 0.001
+
+
+#################### Necessary Parameters to check before running the code ####################
+
+# Input pipeline
+# Specify the path where the HAPT dataset RawData directory is located. 
+HAPTDataset.DATADIR = '/home/data/HAPT_dataset/RawData'
+
+# train
+# Specify the name of the required checkpoint for model to resume training or evaluation
+# The name of the checkpoint should be a string without the file extension, for e.g. if the name is model.ckpt just specify "model".
+# When evaluating make sure to use the same run folder name that is used while training (or) 
+# the run folder where checkpoint is saved.
+# If checkpoint name is set as None, the current weights of the model is evaluated. Therefore make sure to train and evaluate the model in the same run.
+# If checkpoint name is "best". The best checkpoint from the run folder is loaded.
+train.resume_model_path = None
+train.evaluation_checkpoint = None
