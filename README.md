@@ -1,5 +1,5 @@
 # Human-Activity-Recognition
-Prediction of the movement of a person based on sensor data
+Prediction of the movement of a person based on sensor data.
 
 # How to run the code
 Before running the script, make sure the requirements are met by installing from requirements.txt using  
